@@ -1,0 +1,72 @@
+
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - VARIÁVEIS E TIPOS DE DADOS
+====================================================================================================
+
+Introdução
+----------------------------------------------------------------------------------------------------
+Na Informática, uma variável é um espaço na memória do computador utilizado para armazenar um 
+determinado dado.
+  
+Todo dado possui um tipo. Os tipos atualmente utilizados no dia-a-dia são: textos, números e valores
+binários (sim/não, verdadeiro/falso, ligado/desligado).
+   
+A Linguagem Kotlin é uma liguagem de tipagem dinâmica, ou seja, o tipo do dado não é definido
+quando uma variável é declarada. A definição do tipo do dado ocorre quando o valor é atribuído a
+variável.
+
+Após um determinado valor ser atribuído, a variável pode assumir um dos seguintes tipos:
+
+- Byte
+- Short
+- Int
+- Long
+- Float
+- Double
+- Boolean
+- Character
+- String
+
+
+Usando variáveis na Linguagem Kotlin
+----------------------------------------------------------------------------------------------------
+As variáveis na Linguagem Kotlin são não tipadas, ou seja, não é necessário informar o tipo do dado
+que será armazenado na variável.
+  
+Uma variável na Linguagem Kotlin é definida da seguinte maneira:
+  
+    var <nome-variável>
+
+
+Exemplo:
+
+fun main() {
+
+  var b = 127
+  var s = 32767
+  var i = 2147483647
+  var l = 3000000000
+  var f = 3.14159265
+  var d = 5000000.50
+  var c = 'j'
+  var bl = true
+
+  var s2 = 32_767
+  var i2 = 2_147_483_647
+  var l2 = 3_000_000_000L
+  var f2 = 3.1415_9265
+  var d2 = 5_000_000.50
+
+}
+
+
+Identificadores para variáveis
+----------------------------------------------------------------------------------------------------
+A definição de identificadores para variáveis deve seguir as regras abaixo:
+
+- Deve iniciar por uma letra, pelo caractere underscore (_)
+- Não pode iniciar por um dígito numérico
+- Não pode conter caracteres especiais, tipo sinais de pontuação, colchetes ou parênteses
+- Não pode conter espaços em branco para definir identificadores compostos
+- Nomes de variáveis são case-sensitive, ou seja, letras minusculas são diiferentes de maiúsculas
+

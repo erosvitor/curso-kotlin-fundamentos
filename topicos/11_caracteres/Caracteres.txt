@@ -1,0 +1,64 @@
+
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - CARACTERES
+====================================================================================================
+
+Introdução
+---------------------------------------------------------------------------------------------------- 
+Um caractere é um símbolo gráfico utilizado para formar um determinado dado.
+  
+  
+Tipos de caracteres
+  
+A Linguagem Kotlin oferece os seguintes recursos para identificação dos tipos de caracteres:
+  
+  isLetterOrDigit
+  isLetter
+  isLowerCase
+  isUpperCase
+  isDigit
+  isWhitespace
+
+
+Utilizando caracteres
+----------------------------------------------------------------------------------------------------
+
+fun main() {
+
+  // Definindo um caractere
+  val letra:Char
+
+  // Preenchendo um caractere
+  letra = 'K'
+
+  // Exibindo um caractere
+  println(letra)
+
+  // Identificando um determinado caractere
+  val c = 'F'
+
+  println("O caractere $c")
+  if (c.isLetterOrDigit())
+    println("  É um número ou uma letra")
+
+  if (c.isLetter())
+    println("  É uma letra")
+
+  if (c.isLowerCase())
+    println("  É uma letra minúscula")
+
+  if (c.isUpperCase())
+    println("  É uma letra maiúscula")
+
+  if (c.isDigit())
+    println("  É um número")
+
+  if (c.isWhitespace())
+    println("  É um caractere de espaço")
+
+  // Transformação de caracteres
+  val charUpper = 'K'
+  val charLower = charUpper.lowercaseChar()
+  println(charLower)
+
+}

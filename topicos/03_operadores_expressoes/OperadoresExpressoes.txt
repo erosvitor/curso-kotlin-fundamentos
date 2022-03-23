@@ -1,0 +1,47 @@
+
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - OPERADORES E EXPRESSÕES
+====================================================================================================
+
+Introdução
+----------------------------------------------------------------------------------------------------
+Um operador é um símbolo gráfico utilizado na construção de expressões aritméticas. Os operadores
+disponíveis na Linguagem Kotlin são:
+    
+  Operador de atribuição (=)
+  Operadores aritméticos (+, -, *, /, %)
+  Operadores de incremento e decremento (++, --)
+  Operadores compactos (+=, -=, *=, /=, %=)
+
+Quando houver mais de um operador numa expressão aritmética, a seguinte ordem de precedência será
+aplicada:
+
+  - Parêntesis
+  - Exponenciação
+  - Multiplicação e Divisão
+  - Adição e Subtração
+
+Uma expressão aritmética que contenha mais de um mesmo operador, a ordem de execução será da direita
+para a esquerda. Para a maioria dos operadores aritméticos, isso não fará diferença. Mas quando for
+o operador de exponenciação, fará toda a diferença. Por exemplo:
+
+  2 ** 2 ** 3
+
+  resultará em 256 e não 64.
+
+
+Exemplo:
+
+fun main() {
+
+  var n1 = 20
+  var n2 = 10
+
+  var adicao = n1 + n2
+  var subtracao = n1 - n2
+  var multiplicacao = n1 * n2
+  var divisao = n1 / n2
+  var resto = n1 % n2
+
+}
+

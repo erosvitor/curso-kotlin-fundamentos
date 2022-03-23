@@ -1,0 +1,64 @@
+
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - VETORES
+====================================================================================================
+
+Introdução
+---------------------------------------------------------------------------------------------------- 
+Na Informática, vetores são estruturas unidimensionais utilizadas para armazenar uma quantidade
+finita de dados do mesmo tipo.
+    
+Na Linguagem Kotlin os vetores são definidos da seguinte maneira:
+  
+  var <nome-vetor> = arrayOf(item1, item2, ... itemN)
+  
+
+Utilizando Vetores
+----------------------------------------------------------------------------------------------------
+
+fun main() {
+
+  // Declarando um vetor para números inteiros
+  val numeros = Array(5) { 0 }
+
+  // Atribuindo dados ao vetor
+  numeros[0] = 0
+  numeros[1] = 1
+  numeros[2] = 2
+  numeros[3] = 3
+  numeros[4] = 5
+
+  for (n in 0..numeros.size) {
+    println(n)
+  }
+
+  // Atribuindo dados ao vetor na declaração
+  val pares = arrayOf(0, 2, 4, 6, 8)
+
+  // Mostrando os dados contidos no vetor
+  for (i in 0..4) {
+    println(pares[i])
+  }
+
+  // Utilizando o tamanho do vetor
+  for (par in pares) {
+    println(par)
+  }
+
+  // Armazenando textos em vetores
+  val frutas = Array(5) { "" }
+  frutas[0] = "Uva"
+  frutas[1] = "Maçã"
+  frutas[2] = "Abacaxi"
+  frutas[3] = "Manga"
+  frutas[4] = "Banana"
+
+  // Ordenando um vetor de textos
+  frutas.sort()
+  for (fruta in frutas) {
+    println(fruta)
+  }
+
+}
+
+

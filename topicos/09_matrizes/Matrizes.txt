@@ -1,0 +1,40 @@
+
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - MATRIZES
+====================================================================================================
+
+Introdução
+---------------------------------------------------------------------------------------------------- 
+Na Informática, matrizes são estruturas multidimensionais utilizadas para armazenar uma quantidade
+finita de dados do mesmo tipo.
+    
+Na Linguagem Kotlin as matrizes são definidas da seguinte maneira:
+  
+  var <nome-matriz> = arrayOf(<qtde-linhas>, <qtde-colunas>)
+
+
+Utilizando Matrizes
+----------------------------------------------------------------------------------------------------
+
+fun main() {
+
+  // Declarando uma matriz para números inteiros
+  val numeros = arrayOf(Array(2) { 0 }, Array(2) { 0 })
+
+  // Atribuindo dados para a matriz
+  numeros[0][0] = 1
+  numeros[0][1] = 1
+  numeros[1][0] = 2
+  numeros[1][0] = 3
+
+  // Atribuindo dados para a matriz na declaração
+  val coordenadas = arrayOf(intArrayOf(2, 2), intArrayOf(2, 8), intArrayOf(5, 2), intArrayOf(3, 2))
+
+  // Mostrando os dados contidos na matriz
+  for (i in 0..coordenadas.size-1) {
+    for (j in 0..coordenadas[i].size-1) {
+      println(coordenadas[i][j])
+    }
+  }
+
+}
