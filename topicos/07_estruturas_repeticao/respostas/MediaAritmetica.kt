@@ -3,11 +3,11 @@ import java.util.Scanner
 
 fun main() {
 
+  val leitura = Scanner(System.`in`)
+
   println("Média Aritmética")
   println("")
-    
-  val leitura = Scanner(System.`in`)
-    
+      
   var qtde = 1
   var nota = 0.0
   var somaDasNotas = 0.0

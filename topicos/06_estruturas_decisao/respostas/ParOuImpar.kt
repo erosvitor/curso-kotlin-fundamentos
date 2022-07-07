@@ -2,10 +2,10 @@ import java.util.Scanner
 
 fun main() {
 
+  val leitura = Scanner(System.`in`)
+
   println("Verificar se um número é par ou ímpar")
   println("")
-
-  val leitura = Scanner(System.`in`)
 
   print("Digite um número inteiro maior que zero: ")
   val numero = leitura.nextInt()

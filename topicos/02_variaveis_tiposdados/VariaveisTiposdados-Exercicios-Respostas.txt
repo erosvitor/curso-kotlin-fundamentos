@@ -22,8 +22,8 @@ Marque com V os identificadores válidos e com I os identificadores inválidos.
 ( V ) abc      ( I ) 3abc      ( V ) a 
 ( I ) 123a     ( I ) a?B       ( V ) acdl 
 ( I ) _        ( V ) A_a       ( I ) 1 
-( V ) Al23     ( V ) _1        ( V ) A_$_ 
-( F ) $var     ( V ) _$        ( V ) b3l2 
+( V ) Al23     ( V ) _1        ( I ) A_$_ 
+( I ) $var     ( I ) _$        ( V ) b3l2 
 ( I ) AB.DE    ( I ) etc...    ( I ) guarda-chuva
 
 
@@ -36,7 +36,7 @@ R: Espaço na memória do computador para armazenar dados.
 
 Exercício 04
 ----------------------------------------------------------------------------------------------------
-Quais os tipos de dados primitivos da linguagem Kotlin?
+A tipagem de dados na Linguagem Kotlin é estática ou dinâmica?
 
-R: A linguagem Kotlin não possui tipos primitivos, tudo é tratado como objeto.
+R: Tipagem dinâmica
 

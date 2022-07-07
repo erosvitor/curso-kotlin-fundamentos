@@ -56,9 +56,6 @@ fun main() {
   if (c.isWhitespace())
     println("  É um caractere de espaço")
 
-  // Transformação de caracteres
-  val charUpper = 'K'
-  val charLower = charUpper.lowercaseChar()
-  println(charLower)
-
 }
+
+

@@ -11,8 +11,8 @@ programa Kotlin esta sendo executado.
   
 A Linguagem Kotlin disponibiliza os seguintes comandos para saída de dados:
   
-  println - Exibe um dado e avança para a próxima linha
   print   - Exibe um dado e permanece na mesma linha
+  println - Exibe um dado e avança para a próxima linha
 
 
 Exemplo:

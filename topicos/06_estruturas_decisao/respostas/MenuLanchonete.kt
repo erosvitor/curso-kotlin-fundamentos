@@ -2,11 +2,10 @@ import java.util.Scanner
 
 fun main() {
 
-  println("Menu lanchonete")
-  println("")
-
   val leitura = Scanner(System.`in`)
 
+  println("Menu lanchonete")
+  println("")
   println("1 – X-Salada")
   println("2 – X-Bacon")
   println("3 – X-Egg")

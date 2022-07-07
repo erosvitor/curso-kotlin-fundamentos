@@ -62,3 +62,42 @@ fun main() {
 }
 
 
+Operações sobre vetores
+---------------------------------------------------------------------------------------------------- 
+
+fun main() {
+
+  var marcas_veiculos = arrayOf("Fiat", "Mercedes", "Ford", "BMW")
+
+  // Obter quantidade de elementos
+  println(marcas_veiculos.size)
+
+  // Verificar se um determinado item existe na lista
+  println(marcas_veiculos.contains("Chevrolet"))
+
+  // Adicionar item no final da lista
+  marcas_veiculos.plus("Chevrolet")
+  println(marcas_veiculos.contentToString())
+
+  // Inserir item numa determinada posição da lista
+  marcas_veiculos.set(1, "Ferrari")
+  println(marcas_veiculos.contentToString())
+
+  // Ordenar a lista em ordem ascendente
+  marcas_veiculos.sort()
+  println(marcas_veiculos.contentToString())
+
+  // Ordenar a lista em ordem descendente
+  marcas_veiculos.reverse()
+  println(marcas_veiculos.contentToString())
+
+  // Retirar o último elemento da lista
+  val ultimo_elemento = marcas_veiculos.last()
+  println(ultimo_elemento)
+  println(marcas_veiculos.contentToString())
+
+  // Remover todos os elementos da lista
+  // Kotlin não dispõe de um método que remova todos os elementos do vetor
+}
+
+

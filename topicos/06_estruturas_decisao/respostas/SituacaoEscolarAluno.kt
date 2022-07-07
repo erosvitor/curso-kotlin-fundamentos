@@ -2,10 +2,10 @@ import java.util.Scanner
 
 fun main() {
 
+  val leitura = Scanner(System.`in`)
+
   println("Verificar a situção escolar de um aluno")
   println("")
-
-  val leitura = Scanner(System.`in`)
 
   print("Digite a nota do primeiro bimestre: ")
   val nota1 = leitura.nextInt()

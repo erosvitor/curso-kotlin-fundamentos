@@ -5,68 +5,96 @@ CURSO FUNDAMENTOS KOTLIN - VARIÁVEIS E TIPOS DE DADOS
 
 Introdução
 ----------------------------------------------------------------------------------------------------
-Na Informática, uma variável é um espaço na memória do computador utilizado para armazenar um 
-determinado dado.
-  
-Todo dado possui um tipo. Os tipos atualmente utilizados no dia-a-dia são: textos, números e valores
-binários (sim/não, verdadeiro/falso, ligado/desligado).
-   
-A Linguagem Kotlin é uma liguagem de tipagem dinâmica, ou seja, o tipo do dado não é definido
-quando uma variável é declarada. A definição do tipo do dado ocorre quando o valor é atribuído a
-variável.
+Um programa de computador é constituído de três partes: entradas, processamento e saídas. As
+entradas são dados que o programa utiliza para executar uma determinada tarefa. Estes dados podem
+ser textos, números ou valores binários (sim/não, verdadeiro/falso, ligado/desligado).
 
-Após um determinado valor ser atribuído, a variável pode assumir um dos seguintes tipos:
-
-- Byte
-- Short
-- Int
-- Long
-- Float
-- Double
-- Boolean
-- Character
-- String
+Os dados precisam ser armazenados para depois serem utilizados no processamento da tarefa. O local
+onde os dados são armazenados recebe o nome de variável.
 
 
-Usando variáveis na Linguagem Kotlin
+Tipos de dados na linguagem Kotlin
 ----------------------------------------------------------------------------------------------------
-As variáveis na Linguagem Kotlin são não tipadas, ou seja, não é necessário informar o tipo do dado
-que será armazenado na variável.
-  
-Uma variável na Linguagem Kotlin é definida da seguinte maneira:
-  
-    var <nome-variável>
+A linguagem Kotlin é uma linguagem de tipagem dinâmica, ou seja, o tipo do dado será definido quando
+o dado for atribuido a variável e não durante a declaração da variável, como acontence nas
+linguagens de tipagem estática.
 
+Após o dado ser atribuído, a variável pode assumir um dos seguintes tipos:
+
+  String, Char			-> para dados do tipo texto
+  Byte, Short, Int, Long	-> para dados do tipo número inteiro
+  Float, Double		-> para dados do tipo número fracionário
+  Boolean			-> para dados do tipo binário
+
+
+Utilizando variáveis na linguagem Kotlin
+----------------------------------------------------------------------------------------------------
+Para utilizar uma variável é preciso declará-la primeiramente. Na linguagem Kotlin uma variável é
+declarada da seguinte maneira:
+
+    var <identificador> = <dado>
+
+O 'identificador' é um nome arbitrário dado a variável. O 'dado' é o conteúdo que a variável irá
+armazenar. Diferente de outras linguagens, na linguagem Kotlin não é necessário informar o tipo do
+dado que a variável vai armazenar. Isto ocorre porque Kotlin é uma linguagem de tipagem dinâmica, ou
+seja, o tipo do dado será definido quando o dado for atribuído a variável.
 
 Exemplo:
 
-fun main() {
+    var idade = 18
 
-  var b = 127
-  var s = 32767
-  var i = 2147483647
-  var l = 3000000000
-  var f = 3.14159265
-  var d = 5000000.50
-  var c = 'j'
-  var bl = true
 
-  var s2 = 32_767
-  var i2 = 2_147_483_647
-  var l2 = 3_000_000_000L
-  var f2 = 3.1415_9265
-  var d2 = 5_000_000.50
+No exemplo acima o tipo do dado que a variável 'idade' assumirá será o Int. É possível definir o tipo
+do dado explicitamente informando o tipo do dado após o identificador, como no exemplo abaixo:
 
-}
+    var idade: Byte = 18
+    
+Neste caso o tipo do dado da variável 'idade' será Byte e não mais o Int.	
 
 
 Identificadores para variáveis
 ----------------------------------------------------------------------------------------------------
 A definição de identificadores para variáveis deve seguir as regras abaixo:
 
-- Deve iniciar por uma letra, pelo caractere underscore (_)
+- Deve iniciar por uma letra ou pelo caractere underscore (_)
 - Não pode iniciar por um dígito numérico
 - Não pode conter caracteres especiais, tipo sinais de pontuação, colchetes ou parênteses
 - Não pode conter espaços em branco para definir identificadores compostos
-- Nomes de variáveis são case-sensitive, ou seja, letras minusculas são diiferentes de maiúsculas
+- Nomes de variáveis são case-sensitive, ou seja, letras minúsculas são diferentes de maiúsculas
+
+
+Verificando o tipo da variável
+----------------------------------------------------------------------------------------------------
+A linguagem Kotlin disponibiliza o comando '::class.java.typeName' para mostrar o tipo da variável.
+
+Exemplo:
+
+fun main() {
+
+  var a: Byte = 5
+  println(a::class.java.typeName)
+
+  var b: Float = 3.14f
+  println(b::class.java.typeName)
+
+  var c = "Kotlin"
+  println(c::class.java.typeName)
+
+}
+
+
+Constantes
+----------------------------------------------------------------------------------------------------
+Na linguagem Kotlin é utilizado a palavra chave 'val' para definir uma constante.
+
+fun main() {
+
+  val PI = 3.1415f
+  println(PI)
+
+  val FILE_SIZE_LIMIT = 2000
+  println(FILE_SIZE_LIMIT)
+
+}
+
 

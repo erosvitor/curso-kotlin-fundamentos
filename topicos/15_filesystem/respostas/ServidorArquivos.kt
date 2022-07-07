@@ -5,7 +5,7 @@ import java.nio.file.Paths
 
 fun main() {
 
-  val diretorioBase = "/home/eros-bornatowski"
+  val diretorioBase = "/home/erosvitor"
   val diretorioDocs = diretorioBase + "/docs"
 
   var pathDiretorioDocs = Paths.get(diretorioDocs)

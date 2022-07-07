@@ -2,7 +2,7 @@ import java.util.Scanner
 
 fun main() {
 
-  println("Cálculo da área de um triângulo")
+  println("Calcular área de um triângulo")
   println("")
 
   val leitura = Scanner(System.`in`)
