@@ -1,0 +1,82 @@
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - FILESYSTEM
+====================================================================================================
+
+
+Introdução
+----------------------------------------------------------------------------------------------------
+O filesystem, ou sistema de arquivos, é a estrutura utilizada pelos sistemas operacionais para
+organizar os dados armazenados em um meio de armazenamento de dados.
+
+
+Biblioteca OS
+----------------------------------------------------------------------------------------------------
+A linguagem Kotlin oferece o pacote 'java.nio' para manipular o sistema de arquivos. As principais
+operações disponíveis são:
+
+ - Criar
+ - Modificar
+ - Deletar
+
+
+Diretório atual
+----------------------------------------------------------------------------------------------------
+Para obter o diretório atual, deve-se utilizar a classe 'File' do pacote 'java.io'.
+
+import java.nio.file.Paths
+
+fun main() {
+
+  val diretorioAtual = Paths.get("").toAbsolutePath().toString()
+  println(diretorioAtual)
+
+}
+
+
+Conteúdo diretório
+----------------------------------------------------------------------------------------------------
+Para obter o conteúdo de um determinado diretório, deve-se utilizar a classe 'DirectoryStream' do
+pacote 'java.nio'.
+
+import java.nio.file.DirectoryStream
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
+
+fun main() {
+
+    val diretorioAtual = Paths.get("").toAbsolutePath()
+    val conteudoDiretorio:DirectoryStream<Path> = Files.newDirectoryStream(diretorioAtual)
+    for (item in conteudoDiretorio) {
+        println(item)
+    }
+
+}
+
+
+Manipulando diretórios
+----------------------------------------------------------------------------------------------------
+A classe 'Files' disponibiliza diversos métodos para criar e remover diretórios.
+
+import java.io.IOException
+import java.nio.file.Files
+import java.nio.file.Paths
+
+fun main() {
+
+    try {
+        val diretorioAtual = Paths.get("").toAbsolutePath().toString()
+        val novoDiretorio = Paths.get(diretorioAtual + "/novo_diretorio")
+        Files.createDirectory(novoDiretorio)
+
+        val novosDiretorios = Paths.get(diretorioAtual + "/docs/financeiro")
+        Files.createDirectories(novosDiretorios)
+
+        val deleteDiretorio = Paths.get(diretorioAtual+ "/docs/financeiro")
+        Files.delete(deleteDiretorio)
+    } catch (e: IOException) {
+        println("Failed to create directory! $e.getMessage()")
+    }
+
+}
+

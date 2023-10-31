@@ -1,0 +1,144 @@
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - ESTRUTURAS DE DECISÃO
+====================================================================================================
+
+
+Introdução
+----------------------------------------------------------------------------------------------------
+Estruturas de decisão são blocos de comandos que permitem ao programa de computador executar ou não
+um determinado conjunto de comandos de acordo com o resultado de uma expressão lógica.
+  
+As estruturas de decisão disponíveis na linguagem Kotlin são:
+  
+  IF
+  WHEN
+
+
+Estrutura de decisão 'IF'
+----------------------------------------------------------------------------------------------------
+A estrutura de decisão IF avalia o resultado de expressões lógicas para a tomada de decisão. Uma 
+expressão lógica é composta por operadores lógicos e relacionais. Os operadores lógicos disponíveis
+na linguagem Kotlin são:
+
+  e       ( && )
+  ou      ( || )
+  negação ( ! )
+
+Além dos operadores lógicos, a liguagem Kotlin oferece os seguintes operadores relacionais:
+  
+  igual           ( == )
+  não igual       ( != )
+  maior que       ( > )
+  menor que       ( < )
+  maior igual que ( >= )
+  menor igual que ( <= )
+
+
+Programa exemplo:
+
+fun main() {
+
+    // Avaliando apenas o resultado positivo
+    // ----------------------------------------------------------------------------------------------------
+    val idade1 = 18
+    if (idade1 >= 18) {
+        println("Maior de idade")
+    }
+
+    // Avaliando o resultado positivo e negativo
+    // ----------------------------------------------------------------------------------------------------
+    val idade2 = 17
+    if (idade2 >= 18) {
+        println("Maior de idade")
+    } else {
+        println("Menor de idade")
+    }
+
+    // Avaliando mais de uma situação
+    // ----------------------------------------------------------------------------------------------------
+    val idade3 = 15
+    if (idade3 >= 18) {
+        println("Maior de idade")
+    } else if (idade3 >= 16) {
+        println("Menor de idade e pode votar")
+    } else {
+        println("Menor de idade e não pode votar")
+    }
+
+}
+
+
+Expressão IF
+----------------------------------------------------------------------------------------------------
+Na linguagem Kotlin o IF pode ser utilizado para retornar um determinado valor após a avaliação da
+expressão lógica.
+
+Programa exemplo:
+
+fun main() {
+
+    var a = 10
+    var b = 5
+
+    var max = if (a > b) a else b
+    println(max)
+
+    a = 3
+    b = 5
+    max = if (a > b) {
+        println("a é maior que b")
+        a
+    } else {
+        println("b é maior que a")
+        b
+    }
+    println(max)
+    
+}
+
+  
+Estrutura de decisão 'WHEN'
+----------------------------------------------------------------------------------------------------
+A estrutura de decisão WHEN avalia o conteúdo de uma variável e não o resultado de uma expressão 
+lógica.
+
+Outra diferença em relação a estrutura IF é a facilidade de ler e entender o código quando é preciso
+avaliar muitas condições.
+  
+
+Programa exemplo:
+
+fun main() {
+
+    // Avaliando conteúdo de uma variável numérica
+    // ----------------------------------------------------------------------------------------------------
+    val itemCardapio = 2
+    when (itemCardapio) {
+        1 -> println("Escolheu o item 1")
+        2 -> println("Escolheu o item 2")
+        3 -> println("Escolheu o item 3")
+        else -> println("Item inexistente")
+    }
+
+    // Avaliando conteúdo de uma variável String
+    // ----------------------------------------------------------------------------------------------------
+    val color = "blue"
+    when (color) {
+        "red" -> println("Vermelho")
+        "green" -> println("Verde")
+        "blue" -> println("Azul")
+        else -> println("Cor inválida")
+    }
+
+    // Avaliando range de números
+    // ----------------------------------------------------------------------------------------------------
+    val number = 18
+    when (number) {
+        in 1..10 -> println("Esta entre 1 e 10")
+        in 11..20 -> println("Esta entre 11 e 20")
+        !in 21..30 -> println("Não esta entre 21 e 30")
+        else -> println("inválido")
+    }
+
+}
+

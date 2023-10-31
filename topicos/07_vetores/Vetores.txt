@@ -1,0 +1,112 @@
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - VETORES
+====================================================================================================
+
+
+Introdução
+---------------------------------------------------------------------------------------------------- 
+Na Informática, vetores são estruturas unidimensionais utilizadas para armazenar uma quantidade
+finita de dados do mesmo tipo.
+    
+Na linguagem Kotlin os vetores são definidos da seguinte maneira:
+  
+  var <nome-vetor> = arrayOf(item1, item2, ... itemN)
+  
+
+Programa exemplo:
+
+fun main() {
+
+    // Criando um vetor vazio para armazenar números inteiros
+    val numeros = Array(5) { 0 }
+
+    // Armazenando números inteiros no vetor
+    numeros[0] = 0
+    numeros[1] = 1
+    numeros[2] = 2
+    numeros[3] = 3
+    numeros[4] = 5
+
+    // Exibindo o conteúdo do vetor
+    for (n in 0..numeros.size) {
+        println(n)
+    }
+
+    // Criando um vetor com conteúdo
+    val pares = arrayOf(0, 2, 4, 6, 8)
+
+    // Mostrando os dados contidos no vetor
+    for (i in 0..pares.size-1) {
+        println(pares[i])
+    }
+
+    // Criando um vetor vazio para armazenar textos
+    val frutas = Array(5) { "" }
+
+    // Armazenando textos no vetor
+    frutas[0] = "Uva"
+    frutas[1] = "Maçã"
+    frutas[2] = "Abacaxi"
+    frutas[3] = "Manga"
+    frutas[4] = "Banana"
+
+    // Mostrando os dados contidos no vetor
+    for (i in 0..pares.size-1) {
+        println(pares[i])
+    }
+
+    // Outra maneira de percorrer o vetor
+    for (fruta in frutas) {
+        println(fruta)
+    }
+
+}
+
+
+Operações sobre vetores
+---------------------------------------------------------------------------------------------------- 
+Após um vetor ser criado, é possível realizar diveras operações sobre o vetor. As operações mais
+utilizadas são:
+
+- Recuperar a quantidade de elementos
+- Adicionar um elemento no final do vetor
+- Colocar em ordem ascendente ou descendente
+- Pegar o último elemento sem precisar usar o índice
+- Embaralhar o conteúdo do vetor
+
+
+Programa exemplo:
+
+fun main() {
+
+    var marcasVeiculos = arrayOf("Fiat", "Mercedes", "Ford", "BMW")
+
+    // Obter quantidade de elementos
+    println(marcasVeiculos.size)
+
+    // Verificar se um determinado item existe no vetor
+    println(marcasVeiculos.contains("Chevrolet"))
+
+    // Adicionar item no final do vetor
+    marcasVeiculos = marcasVeiculos.plus("Chevrolet")
+    println(marcasVeiculos.contentToString())
+
+    // Ordenar o vetor em ordem ascendente
+    marcasVeiculos.sort()
+    println(marcasVeiculos.contentToString())
+
+    // Ordenar o vetor em ordem descendente
+    marcasVeiculos.reverse()
+    println(marcasVeiculos.contentToString())
+
+    // Pegar o último elemento do vetor
+    val ultimoElemento = marcasVeiculos.last()
+    println(ultimoElemento)
+    println(marcasVeiculos.contentToString())
+
+    // Embaralhar conteúdo do vetor
+    marcasVeiculos.shuffle()
+    println(marcasVeiculos.contentToString())
+
+}
+

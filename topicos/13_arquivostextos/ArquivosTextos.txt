@@ -1,0 +1,102 @@
+====================================================================================================
+CURSO FUNDAMENTOS KOTLIN - ARQUIVOS TEXTOS
+====================================================================================================
+
+
+Introdução
+---------------------------------------------------------------------------------------------------- 
+Arquivos textos são arquivos que podem ser lidos e compreendidos facilmente por seres humanos. Não
+contém nenhuma codificação ou formatação em especial. 
+
+A linguagem Kotlin oferece as seguintes classes para manipulação de arquivos textos:
+
+- File
+- printWriter
+- bufferedWriter
+- useLines
+- bufferedReader
+- readLines
+
+
+Escrevendo num arquivo usando 'printWriter'
+---------------------------------------------------------------------------------------------------- 
+
+Programa exemplo:
+
+import java.io.File
+
+fun main() {
+
+  val file = File("dadoscurso.txt")
+  file.printWriter().use { buffer ->
+    buffer.println("Linguagem Kotlin")
+    buffer.println("45 horas")
+    buffer.println("Noite")
+  }
+
+}
+
+
+Escrevendo num arquivo usando 'bufferedWriter'
+---------------------------------------------------------------------------------------------------- 
+
+Programa exemplo:
+
+import java.io.File
+
+fun main() {
+
+  val file = File("dadoscurso.txt")
+  file.bufferedWriter().use { buffer ->
+    buffer.write("Linguagem Kotlin\n")
+    buffer.write("45 horas\n")
+    buffer.write("Noite\n")
+  }
+
+}
+
+
+Lendo um arquivo usando 'useLines'
+---------------------------------------------------------------------------------------------------- 
+
+Programa exemplo:
+
+import java.io.File
+
+fun main() {
+
+    val lines = File("dadoscurso.txt").useLines { it.toList() }
+    lines.forEach { println(it) }
+
+}
+
+
+Lendo um arquivo usando 'bufferedReader'
+---------------------------------------------------------------------------------------------------- 
+
+Programa exemplo:
+
+import java.io.File
+
+fun main() {
+
+    val lines = File("dadoscurso.txt").bufferedReader().readLines()
+    lines.forEach { println(it) }
+
+}
+
+
+Lendo um arquivo usando 'readLines'
+---------------------------------------------------------------------------------------------------- 
+
+Programa exemplo:
+
+import java.io.File
+
+fun main() {
+
+    val lines = File("dadoscurso.txt").readLines()
+    lines.forEach { println(it) }
+
+}
+
