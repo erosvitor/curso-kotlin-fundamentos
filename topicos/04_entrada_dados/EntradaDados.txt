@@ -1,3 +1,4 @@
+
 ====================================================================================================
 CURSO FUNDAMENTOS KOTLIN - ENTRADA DE DADOS
 ====================================================================================================
@@ -5,12 +6,32 @@ CURSO FUNDAMENTOS KOTLIN - ENTRADA DE DADOS
 
 Introdução
 ----------------------------------------------------------------------------------------------------
-Entrada de dados é a operação que consiste em receber dados do usuário. Normalmente a entrada padrão
-é o teclado, mas pode ser um arquivo em disco ou um outro dispositivo qualquer.
-  
-A linguagem Kotlin disponibiliza o comando 'Scanner' para receber dados do usuário. O comando 'Scanner'
-possibilita a entrada de diversos tipos de dados.
+Entrada de dados é a operação executada pelo programa de computador onde dados são recebidos do 
+usuário.
 
+
+Saída de dados
+----------------------------------------------------------------------------------------------------
+A linguagem Kotlin disponibiliza os seguintes comandos para entrada de dados:
+
+  Scanner - lê qualquer tipo de dados
+  readln  - específico para ler textos 
+
+O comando Scanner disponibiliza os seguintes recursos para leitura de dados de tipos diferentes:
+
+	nextByte()
+	nextShort
+	nextInt()
+	nextLong
+	nextFloat()
+	nextDouble
+	nextBigInteger()
+	nextBigDecimal()
+	nextBoolean()
+	nextLine()
+	
+Os comandos acima descritos são úteis na construção de programas console (aqueles executados no
+prompt do sistema operacional) que exigem entrada de dados pelo teclado.
 
 Exemplo:
 
@@ -38,4 +59,11 @@ fun main() {
     val altura = read.nextFloat()
     println("Sua altura é $altura")
 
+    // Comando readln
+    // --------------------------------------------------------------------------------
+    print("Qual é o nome do seu país: ")
+    val pais = readln()
+    println("Você mora no(a) " + pais)
+
 }
+

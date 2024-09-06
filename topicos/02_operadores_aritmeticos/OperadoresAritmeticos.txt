@@ -1,12 +1,17 @@
+
 ====================================================================================================
-CURSO FUNDAMENTOS KOTLIN - OPERADORES E EXPRESSÕES
+CURSO FUNDAMENTOS KOTLIN - OPERADORES ARITMÉTICOS
 ====================================================================================================
 
 
 Introdução
 ----------------------------------------------------------------------------------------------------
-Um operador é um símbolo gráfico utilizado na construção de expressões aritméticas. Os operadores
-disponíveis na linguagem Kotlin são:
+Um operador aritmético é um símbolo gráfico utilizado para construir expressões aritméticas.
+
+
+Operadores aritméticos
+----------------------------------------------------------------------------------------------------
+Operadores aritméticos disponíveis na linguagem Kotlin:
     
   Operador de atribuição ( = )
   Operadores aritméticos ( +, -, *, /, % (resto) )
@@ -21,27 +26,27 @@ aplicada:
   - Multiplicação e Divisão
   - Adição e Subtração
 
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
-    var n1 = 20
-    var n2 = 10
+	  var n1 = 20
+	  var n2 = 10
 
-    var adicao = n1 + n2
-    println(adicao)
+	  var adicao = n1 + n2
+	  println(adicao)
 
-    var subtracao = n1 - n2
-    println(subtracao)
+	  var subtracao = n1 - n2
+	  println(subtracao)
 
-    var multiplicacao = n1 * n2
-    println(multiplicacao)
+	  var multiplicacao = n1 * n2
+	  println(multiplicacao)
 
-    var divisao = n1 / n2
-    println(divisao)
+	  var divisao = n1 / n2
+	  println(divisao)
 
-    var resto = n1 % n2
-    println(resto)
+	  var resto = n1 % n2
+	  println(resto)
 
 }
+	

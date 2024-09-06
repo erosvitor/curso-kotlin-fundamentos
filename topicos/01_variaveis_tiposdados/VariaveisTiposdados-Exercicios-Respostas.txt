@@ -38,5 +38,5 @@ Exercício 04
 ----------------------------------------------------------------------------------------------------
 A tipagem de dados na Linguagem Kotlin é estática ou dinâmica?
 
-R: Dinâmica
+R: Estática
 

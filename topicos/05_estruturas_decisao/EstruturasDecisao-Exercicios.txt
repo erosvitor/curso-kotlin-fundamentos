@@ -3,6 +3,7 @@
 CURSO FUNDAMENTOS KOTLIN - ESTRUTURAS DE DECISÃO - EXERCÍCIOS
 ====================================================================================================
 
+
 Exercício 01 (IF) - Par ou Ímpar
 ----------------------------------------------------------------------------------------------------
 Escreva um programa que leia um número inteiro e depois mostre na tela se o número é par ou ímpar.

@@ -1,7 +1,8 @@
 
 ====================================================================================================
-CURSO FUNDAMENTOS KOTLIN - OPERADORES E EXPRESSÕES - EXERCÍCIOS
+CURSO FUNDAMENTOS KOTLIN - OPERADORES ARITMÉTICOS - EXERCÍCIOS - RESPOSTAS
 ====================================================================================================
+
 
 Exercício 01
 ----------------------------------------------------------------------------------------------------
@@ -12,7 +13,7 @@ Qual o valor atribuído a variável 'c'?
   var c = (a - b) * (++a)
   
   
-  R: ____________________
+  R: 210
 
 
 Exercício 02
@@ -24,7 +25,7 @@ No fragmento de código abaixo, qual o resultado da expressão aritmética?
   var k = i++ * j + (i / 3)
   
 
-  R: ____________________
+  R: 50
 
 
 Exercício 03
@@ -40,7 +41,7 @@ Ao final da execução do código abaixo, qual o valor atribuído a variável 'z
   var z = (x + y) * (++x + y)
   
   
-  R: ____________________
+  R: 72
 
 
 Exercício 04
@@ -55,5 +56,5 @@ Qual valor será atribuído a variável 'p'?
   var p = (m + n) + (--m * n++)
   
 
-  R: ____________________
+  R: 50
 

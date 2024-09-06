@@ -1,66 +1,69 @@
+
 ====================================================================================================
 CURSO FUNDAMENTOS KOTLIN - ESTRUTURAS DE REPETIÇÃO
 ====================================================================================================
 
 
 Introdução
+----------------------------------------------------------------------------------------------------
+As estruturas de repetição permitem ao programa de computador repetir a execução de um conjunto de
+comandos de acordo com o resultado de uma expressão.
+
+
+Estruturas de repetição
 ---------------------------------------------------------------------------------------------------- 
-Estruturas de repetição são blocos de comandos que permitem ao programa de computador executar um
-conjunto de comandos de forma repetitiva. A quantidade de repetições será determina pelo resultado
-da avaliação de uma expressão lógica. Os comandos serão executados enquanto a expressão lógica
-resultar o valor verdadeiro.
-  
-As estruturas de repetição disponíveis na Linguagem Kotlin são:
+Estruturas de repetição disponíveis na linguagem Kotlin:
   
   FOR
   WHILE
   DO..WHILE
 
 
-Estrutura de repetição 'FOR'
+FOR
 ---------------------------------------------------------------------------------------------------- 
-A estrutura de repetição FOR é utilizada quando sabe-se a quantidade exata de vezes que um 
-determinado conjunto de comandos deve ser repetido. É ideal para manipular vetores e matrizes.
-  
-A sintaxe da estrutura de repetição FOR é a seguinte:
-  
-  for (item in collection) println(item)
+Útil quando a quantidade de repetições é conhecida. Por exemplo, imprimir os dez primeiros números
+inteiros naturais ou percorrer um vetor do início ao fim.
 
+A estrutura de repetição FOR possui a seguinte sintaxe:
 
-Programa exemplo:
+  for (<var> in <initial-value>..<final-value> [<step> <value>]) {
+    <commands>
+  }
+
+Exemplo:
 
 fun main() {
 
-    println("10 números inteiros naturais...")
+    println("Imprimindo os 10 primeiros números inteiros naturais")
     for (n in 0..9) {
         println(n)
     }
-
-    for (n in 6 downTo 0 step 2) {
+    
+    println("Imprimindo os 10 primeiros números inteiros naturais de três em três")
+    for (n in 0..9 step 3) {
         println(n)
     }
 
 }
+
   
-  
-Estrutura de repetição 'WHILE'
+WHILE
 ---------------------------------------------------------------------------------------------------- 
-A estrutura de repetição WHILE é utilizada quando não se tem a quantidade exata de vezes que um
-determinado conjunto de instruções deve ser repetido. É ideal para receber entradas do usuário e
-leitura de arquivos em disco.
-    
-A sintaxe da estrutura de repetição WHILE é a seguinte:
+Útil quando a quantidade de repetições não é conhecida. Por exemplo, ler o conteúdo de um arquivo
+texto ou aguardar até que o usuário escolhe a opção para finalizar o programa. Outra característica
+é que a condição-lógica será avaliada primeiro e só depois os comandos serão executados.
+
+A estrutura de repetição WHILE possui a seguinte sintaxe:
     
   while (<condição-lógica>) {
-      
+    <comandos>    
   }
 
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
-    println("10 números inteiros naturais...")
+    println("Imprimindo os 10 primeiros números inteiros naturais")
     var n = 0
     while (n < 10) {
         println(n)
@@ -69,23 +72,25 @@ fun main() {
 
 }
 
-Estrutura de repetição 'DO..WHILE'
+
+DO..WHILE
 ---------------------------------------------------------------------------------------------------- 
-A estrutura de repetição DO..WHILE é utilizada quando o conjunto de instruções deve ser executado
-pelo menos uma vez. É ideal para a escolha de itens de um determinado menu de opções.
-    
-A sintaxe da estrutura de repetição DO..WHILE é a seguinte:
-    
+Útil quando a quantidade de repetições não é conhecida. Por exemplo, um programa matemático onde é
+exibido um menu contendo várias opções de cálculos para figuras planas. O programa ficará rodando
+até o usuário escolher a opção para finalizar. Outra característica é que os comandos serão
+executados pelo menos uma vez. A condição lógica será avaliada apenas depois da primeira execução.
+
+A estrutura de repetição DO..WHILE possui a seguinte sintaxe:
+
   do {
-      
-  } while (<condição-lógica>);
+    <comandos>
+  } while (<condição-lógica>)
 
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
-    println("10 números inteiros naturais...")
+    println("Imprimindo os 10 primeiros números inteiros naturais")
     var n = 0
     do {
         println(n)

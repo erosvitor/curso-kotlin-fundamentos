@@ -1,3 +1,4 @@
+
 ====================================================================================================
 CURSO FUNDAMENTOS KOTLIN - ESTRUTURAS DE DECISÃO
 ====================================================================================================
@@ -5,36 +6,48 @@ CURSO FUNDAMENTOS KOTLIN - ESTRUTURAS DE DECISÃO
 
 Introdução
 ----------------------------------------------------------------------------------------------------
-Estruturas de decisão são blocos de comandos que permitem ao programa de computador executar ou não
-um determinado conjunto de comandos de acordo com o resultado de uma expressão lógica.
-  
-As estruturas de decisão disponíveis na linguagem Kotlin são:
+As estruturas de decisão permitem ao programa de computador executar ou não um determinado conjunto
+de comandos de acordo com o resultado de uma expressão lógica.
+
+
+Estruturas de decisão
+----------------------------------------------------------------------------------------------------
+Estruturas de decisão disponíveis na linguagem Kotlin:
   
   IF
   WHEN
 
 
-Estrutura de decisão 'IF'
+IF
 ----------------------------------------------------------------------------------------------------
-A estrutura de decisão IF avalia o resultado de expressões lógicas para a tomada de decisão. Uma 
-expressão lógica é composta por operadores lógicos e relacionais. Os operadores lógicos disponíveis
-na linguagem Kotlin são:
+É útil quando um conjunto de comandos precisa ser executado mediante uma condição. Por exemplo, num
+programa para cadastrar pessoas, o nome do cônjuge só será solicitado se a pessoa for casada.
 
-  e       ( && )
-  ou      ( || )
-  negação ( ! )
+A estrutura de decisão IF possui a seguinte sintaxe:
 
-Além dos operadores lógicos, a liguagem Kotlin oferece os seguintes operadores relacionais:
-  
-  igual           ( == )
-  não igual       ( != )
-  maior que       ( > )
-  menor que       ( < )
-  maior igual que ( >= )
-  menor igual que ( <= )
+  if (<expressão-lógica>) {
+    <comandos>
+  } else {
+    <comandos>
+  } 
 
+A expressão-lógica é uma expressão lógica construída utilizando um ou mais dos seguintes operadores
+lógicos e relacionais:
 
-Programa exemplo:
+Operadores lógicos:
+  &&  ( e )
+  ||  ( ou )
+  !   ( negação )
+
+Operadores relacionais:
+  ==  ( igual )
+  !=  ( não igual )
+  >   ( maior que )
+  <   ( menor que )
+  >=  ( maior igual que )
+  <=  ( menor igual que )
+
+Exemplo:
 
 fun main() {
 
@@ -70,10 +83,10 @@ fun main() {
 
 Expressão IF
 ----------------------------------------------------------------------------------------------------
-Na linguagem Kotlin o IF pode ser utilizado para retornar um determinado valor após a avaliação da
-expressão lógica.
+A linguagem Kotlin oferece uma variação da estrutura de decisão IF onde o IF é utilizado como uma
+expressão que retorna um valor.
 
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
@@ -97,16 +110,21 @@ fun main() {
 }
 
   
-Estrutura de decisão 'WHEN'
+WHEN
 ----------------------------------------------------------------------------------------------------
-A estrutura de decisão WHEN avalia o conteúdo de uma variável e não o resultado de uma expressão 
-lógica.
+É útil quando um conjunto de comandos precisa ser executado mediante o conteúdo de uma variável. Por
+exemplo, num programa para registrar o pedido de um cliente numa lanchonete.
 
-Outra diferença em relação a estrutura IF é a facilidade de ler e entender o código quando é preciso
-avaliar muitas condições.
-  
+A estrutura de decisão WHEN possui a seguinte sintaxe:
 
-Programa exemplo:
+  when (<variável>) {
+    <valor1> -> { <comandos> }
+    <valor2> -> { <comandos> }
+    <valorN> -> { <comandos> }
+    else -> { <comandos> }
+  }
+    
+Exemplo:
 
 fun main() {
 

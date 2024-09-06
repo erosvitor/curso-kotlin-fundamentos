@@ -1,19 +1,23 @@
+
 ====================================================================================================
-CURSO FUNDAMENTOS KOTLIN - VETORES
+CURSO FUNDAMENTOS KOTLIN - VETORES E MATRIZES
 ====================================================================================================
 
 
 Introdução
 ---------------------------------------------------------------------------------------------------- 
-Na Informática, vetores são estruturas unidimensionais utilizadas para armazenar uma quantidade
-finita de dados do mesmo tipo.
-    
-Na linguagem Kotlin os vetores são definidos da seguinte maneira:
+Na Informática, vetores e matrizes são estruturas utilizadas para armazenar uma quantidade finita de
+dados. A diferença entre elas é que vetores são estruturas unidimensionais e matrizes são 
+multidimensionais.
+
+
+Vetores
+---------------------------------------------------------------------------------------------------- 
+Um vetor possui a seguinte sintaxe:
   
   var <nome-vetor> = arrayOf(item1, item2, ... itemN)
   
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
@@ -65,8 +69,7 @@ fun main() {
 
 Operações sobre vetores
 ---------------------------------------------------------------------------------------------------- 
-Após um vetor ser criado, é possível realizar diveras operações sobre o vetor. As operações mais
-utilizadas são:
+É possível realizar as seguintes operações sobre vetores:
 
 - Recuperar a quantidade de elementos
 - Adicionar um elemento no final do vetor
@@ -74,8 +77,7 @@ utilizadas são:
 - Pegar o último elemento sem precisar usar o índice
 - Embaralhar o conteúdo do vetor
 
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
@@ -107,6 +109,39 @@ fun main() {
     // Embaralhar conteúdo do vetor
     marcasVeiculos.shuffle()
     println(marcasVeiculos.contentToString())
+
+}
+
+
+Matrizes
+---------------------------------------------------------------------------------------------------- 
+Uma matriz possui a seguinte sintaxe:
+
+ var <nome-matriz> = arrayOf(<qtde-linhas>, <qtde-colunas>)
+
+Exemplo:
+
+fun main() {
+
+    // Criando uma matriz 2x2 para armazenar números inteiros
+    val numeros = arrayOf(Array(2) { 0 }, Array(2) { 0 })
+
+    // Armazenando números inteiros na matriz
+    numeros[0][0] = 1
+    numeros[0][1] = 1
+    numeros[1][0] = 2
+    numeros[1][0] = 3
+
+    // Criando uma matriz 2x4 com números inteiros
+    val coordenadas = arrayOf(intArrayOf(2, 2), intArrayOf(2, 8), intArrayOf(5, 2), intArrayOf(3, 2))
+
+    // Mostrando os dados contidos na matriz
+    for (i in coordenadas.indices) {
+        for (j in coordenadas[i].indices) {
+            print(coordenadas[i][j])
+        }
+        println("")
+    }
 
 }
 

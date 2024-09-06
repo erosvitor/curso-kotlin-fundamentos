@@ -1,3 +1,4 @@
+
 ====================================================================================================
 CURSO FUNDAMENTOS KOTLIN - SAÍDA DE DADOS
 ====================================================================================================
@@ -5,17 +6,22 @@ CURSO FUNDAMENTOS KOTLIN - SAÍDA DE DADOS
 
 Introdução
 ----------------------------------------------------------------------------------------------------
-Saída de dados é a operação que consiste em mostrar dados ao usuário. Normalmente a saída de dados
-padrão é o monitor, mas pode ser um arquivo em disco ou um dispositivo conectado ao hardware onde o
-programa Kotlin esta sendo executado.
-  
+Saída de dados é a operação executada pelo programa de computador onde dados são apresentados ao
+usuário.
+
+
+Saída de dados
+----------------------------------------------------------------------------------------------------
 A linguagem Kotlin disponibiliza os seguintes comandos para saída de dados:
   
   print   - Exibe um dado e permanece na mesma linha
   println - Exibe um dado e avança para a próxima linha
 
+Os comandos acima descritos são úteis na construção de programas console (aqueles executados no
+prompt do sistema operacional) e também para registrar dados no console de um servidor de aplicação
+como forma de debugar a execução do programa.
 
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
@@ -27,6 +33,7 @@ fun main() {
     println(PI)
 
     // Mesclando texto fixo com conteúdo de variável
+    println("O valor da constante PI é " + PI)
     println("O valor da constante PI é $PI")
 
     // Mostrando dados sem pular linha

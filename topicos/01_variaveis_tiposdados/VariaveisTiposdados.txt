@@ -1,3 +1,4 @@
+
 ====================================================================================================
 CURSO FUNDAMENTOS KOTLIN - VARIÁVEIS E TIPOS DE DADOS
 ====================================================================================================
@@ -5,99 +6,91 @@ CURSO FUNDAMENTOS KOTLIN - VARIÁVEIS E TIPOS DE DADOS
 
 Introdução
 ----------------------------------------------------------------------------------------------------
-Variáveis são espaços reservados na memória do computador para armazenamento temporário de dados. Os
-espaços são reservados quando o programa é executado e uma declaração de variável é encontrada. Na
-linguagem Kotlin uma variável é declarada seguindo o padrão:
+Uma variável é um espaço na memória do computador utilizado para armazenar um dado. A variável é o 
+recurso utilizado pelo programa de computador para armazenar o dado para posteriormente processá-lo.
+
+
+Variáveis
+----------------------------------------------------------------------------------------------------
+Para criar uma variável na linguagem Kotlin, utiliza-se a sintaxe:
 
     var <identificador> = <dado>
 
-O 'identificador' é um nome arbitrário dado a variável. O nome deve seguir as seguintes regras:
+O 'identificador' é um nome arbitrário dado a variável e deve seguir as seguintes regras:
 
 - Deve iniciar por uma letra ou pelo caractere underscore (_)
 - Não pode iniciar por um dígito numérico
-- Não pode conter caracteres especiais, tipo sinais de pontuação, colchetes ou parênteses
+- Não pode conter caracteres especiais, sinais de pontuação, colchetes ou parênteses
 - Não pode conter espaços em branco para definir nomes compostos
-- Nomes de variáveis são case-sensitive, ou seja, letras minúsculas são diferentes de maiúsculas
 
-O 'dado' é o conteúdo que a variável irá armazenar. Na linguagem Kotlin não é necessário informar o
-tipo do dado que será armazenado na variável. Isto ocorre porque Kotlin é uma linguagem de tipagem
-dinâmica, ou seja, o tipo da variável será definido quando o dado for atribuído à variável. No exemplo
-abaixo:
+  Obs: Kotlin é case-sensitive, ou seja, letras minúsculas são diferentes de letras maiúsculas.
+
+O 'dado' é o conteúdo que será armazenado na variável.
+
+No exemplo abaixo
 
     var name = "Fulano da Silva"
 
-A variável 'nome' será do tipo String, dado que o valor 'Fulano da Silva' é um texto. Caso necessário,
-é possível definir explicitamente o tipo do dado na declaração da variável seguindo o padrão:
+A variável 'name' será do tipo texto, dado que o conteúdo 'Fulano da Silva' é um nome de pessoa e 
+um nome de pessoa é um texto.
 
-    var <identificador>: <tipo-do-dado> = <dado>
-
-Por exemplo:
-
-    var email: String = "fulano@email.com"
-
-Isto é particularmente útil quando o valor será atribuido posteriormente a declaração da variável.
-Outro motivo é forçar que a variável receba um determinado tipo de dado específico. Por exemplo, na
-declaração abaixo:
-
-    var age = 18
-
-A variável 'age' assumirá o tipo 'Int', tipo de dado padrão quando números inteiros são utilizados.
-O número '18' é um valor baixo, pode ser armazenado numa variável com tipo de dado mais simples,
-para ocupar menos espaço em memória. Então, poderíamos definir que a variável 'age' seja do tipo
-Byte da seguinte forma:
-
-    var age: Byte = 18
-
-Para imprimir o conteúdo de uma determinada variável é utilizado o comando 'println' da seguinte
-forma:
-
-  println(<nome-da-variável>)
-
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
     // Variable declaration
     var name = "Fulano da Silva"
-    var email: String = "fulano@email.com"
-    var age: Byte = 18
 
-    // Printing variables
+    // Printing variable
     println(name)
-    println(email)
-    println(age)
 
 }
 
 
 Tipos de dados
 ----------------------------------------------------------------------------------------------------
-Na linguagem Kotlin não existe tipos de dados primitivos, qualquer coisa é um objeto. Os tipos de
-dados disponíveis são:
+Tipos de dados disponíveis no Kotlin:
 
-Para números inteiros: 
+- Byte, Short, Int e Long para números inteiros
+- UByte, UShort, UInt e ULong para números inteiros sem sinal
+- Float e Double para números ponto-flutuante
+- Boolean para valores booleanos
+
+Kotlin permite que o tipo de dado da variável seja definido de forma explicita na declaração da
+variável utilizando a sintaxe:
+
+    var <identificador>: <tipo-do-dado> = <dado>
+
+Por exemplo:
+
+    var age: Byte = 18
+
+Quando definimos o tipo da variável no momento da sua criação, podemos ter a variável sem conteúdo.
+Isto é útil quando precisamos armazenar o conteúdo na variável posteriormente à sua criação.
+
+
+Tipos de dados e faixas de valores
+----------------------------------------------------------------------------------------------------
+Números inteiros: 
 - Byte: 8 bits, -128 a 127
 - Short: 16 bits, -32768 a 32767
 - Int: 32 bits, -2.147.483.648 (-2^31) a 2.147.483.647 (2^31 - 1)
 - Long: 64 bis, -9.223.372.036.854.775.808 (-2^63) a 9.223.372.036.854.775.807 (2^63 - 1)
 
-Para números inteiros sem sinal:
+Números inteiros sem sinal:
 - UByte: 8 bits, 0 a 255
 - UShort: 16 bits, 0 a 65535
 - UInt: 32 bits, 0 a 2^32 - 1
 - ULong: 64 bits, 0 a 2^64 - 1
 
-Para números ponto-flutuante:
+Números ponto-flutuante:
 - Float: 32 bits, 24 bits significantes, 6 a 7 dígitos decimais
 - Double: 64 bits, 53 bits significantes, 15 a 16 dígitos decimais
 
-Para valores booleanos: Boolean (true e false)
+Dados booleano:
+- Boolean (true e false)
 
-Para textos: String
-
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
@@ -106,16 +99,18 @@ fun main() {
     var oneShort: Short = 1
     var oneInt = 1
     var oneLong = 1L
+    //var byte_: Byte = 128 // não aceitará, ultrapassa o limite de 127
 
     // Numbers: Floating-point types
-    val e = 2.7182818284 // Double
     val eFloat = 2.7182818284f // Float (valor assumido será 2.7182817)
-    println(e)
+    val eDouble = 2.7182818284 // Double
     println(eFloat)
+    println(eDouble)
 
     // Boolean
     var active = true
-    var isAlive: Boolean = false
+    var isAlive: Boolean
+    isAlive = false
 
     // String
     var country = "Brazil"
@@ -126,45 +121,52 @@ fun main() {
 
 Literais numéricos
 ----------------------------------------------------------------------------------------------------
-A linguagem Kotlin suporta os seguintes literais para números inteiros:
+Literais numéricos disponíveis no Koltin:
 
 - Decimais: 123
 - Longs: 123L
-- Hexadecimais: 0x7B
 - Binários: 0b1111011
+- Octal: não suportado
+- Hexadecimais: 0x7B
 
-É possível utilizar o caractere underscore (_) para tornar os literais númericos mais legíveis.
+Para facilitar a leitura de literais numéricos extensos, utiliza-se o caractere underscore (_).
 
   var oneMillion = 1_000_000
   var creditCardNumber = 1234_5678_9012_3456L
   var hexBytes = 0xFF_EC_DE_5E
   var bytes = 0b11010010_01101001_10010100_10010010
 
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
     var decimal = 123
     var long = 123L
-    var hexa = 0x7B  // 123 em hexadecimal
     var binary = 0b1111011  // 123 em binário
-    // Literais octais não são suportados pelo Kotlin
-
+    var hexa = 0x7B         // 123 em hexadecimal
     println(decimal)
     println(long)
-    println(hexa)
     println(binary)
+    println(hexa)
 
+    var oneMillion = 1_000_000
+    var creditCardNumber = 1234_5678_9012_3456L
+    var hexBytes = 0xFF_EC_DE_5E
+    var bytes = 0b11010010_01101001_10010100_10010010
+    println(oneMillion)
+    println(creditCardNumber)
+    println(hexBytes)
+    println(bytes)
+    
 }
 
 
 Verificando o tipo da variável
 ----------------------------------------------------------------------------------------------------
-A linguagem Kotlin disponibiliza o recurso '::class.java.typeName' para mostrar o tipo da variável.
+Para exibir o tipo de dado de uma determinada variável utiliza-se o recurso '::class.java.typeName'
+logo após o nome da variável.
 
-
-Programa exemplo:
+Exemplo:
 
 fun main() {
 
@@ -182,24 +184,17 @@ fun main() {
 
 Constantes
 ----------------------------------------------------------------------------------------------------
-Na linguagem Kotlin há duas maneiras de declarar uma constante. A primeira maneira é utilizando a 
-palavra reservada 'val' e a segunda é utilizando 'const val'. Utilizando 'val' a constante é criada
-em tempo de execução e utilizando 'const val' a constante é criada em tempo de compilação.
+Constantes são variáveis que não podem ser modificadas depois de receberem um conteúdo. São criadas
+utilizando a palavra-chave 'val'.
 
-
-Programa exemplo:
-
-val tmp = sayHello()        // No error
-//const val tmp = sayHello()  // Error
-
-fun sayHello():String{
-    return "Hello"
-}
+Exemplo:
 
 fun main() {
 
-    println(tmp)
+    val PI = 3.1415f
+    println(PI)
+
+    //PI = 3.14f  // Erro
 
 }
-
 
